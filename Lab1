@@ -2,7 +2,7 @@
 Programmer: Landon Baker, Zachary Anderson
 Date: 3.10.20
 Program: Sandbox(Figure8)
- *This program makes the Sphero Bolt do a figure 8 loop.
+ //This program makes the Sphero Bolt do a figure 8 loop.
  
 /**
  *Loop 1 makes the Sphero Bolt go in nearly a full counter-clockwise circle.
