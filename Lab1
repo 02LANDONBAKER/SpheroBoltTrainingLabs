@@ -1,23 +1,28 @@
 /**
-Programmer: Landon Baker
+Programmer: Landon Baker, Zachary Anderson
 Date: 3.10.20
 Program: Sandbox(Figure8)
  *This program makes the Sphero Bolt do a figure 8 loop.
- */
+ 
+/**
+ *Loop 1 makes the Sphero Bolt go in nearly a full counter-clockwise circle.
+*/
 async function Loop1() {
 setSpeed(80) // Sets the speed to 80
 await spin(-355, 3) // Makes it so that it spins in nearly a 360 degree circle, counter-clockwise
 await delay(.5) // Sets the delay before the next program begins
 }
+
 /**
-*Loop 1 makes the Sphero Bolt go in nearly a full counter-clockwise circle.
+*Loop 2 makes it so it goes in another nearly full clockwise circle.
 */
 async function Loop2(){
 	setSpeed(80)// Sets the speed to 80
 await spin(355, 3) //Makes it so the Bolt spins nearly 360 degrees, clockwise.
 }
+
 /**
-*Loop 2 makes it so it goes in another nearly full clockwise circle.
+*This startProgram makes it so Loop1 happens first, then Loop2 occurs, then another Loop1 to make it go in a full figure 8.
 */
 async function startProgram(){
 	await Loop1(); // Calls the function Loop1 into effect
@@ -25,6 +30,3 @@ async function startProgram(){
 	await Loop1(); // Calls the function Loop1 again
 	stopRoll()
 }
-/**
-*This startProgram makes it so Loop1 happens first, then Loop2 occurs, then another Loop1 to make it go in a full figure 8.
-*/
